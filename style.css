@@ -1,0 +1,35 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-size: 24px;
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+}
+
+h3 {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+    text-indent: 48px;
+}
+
+    p.right-align {
+        text-align: right;
+    }
+
+figure {
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+ul {
+    list-style: georgian;
+}
