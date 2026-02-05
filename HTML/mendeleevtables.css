@@ -1,0 +1,189 @@
+﻿:root 
+{
+    --size-w: 65px;
+    --size-h: 70px;
+    --gap: 4px;
+}
+
+body 
+{
+    background: #98A869;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+}
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.block-wrapper 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.shift 
+{
+    margin-left: calc(var(--size-w) * 2 + var(--gap) * 2 + 12px);
+}
+
+.block-title 
+{
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.block 
+{
+    background: #3d3c3c;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.main-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(18, var(--size-w));
+    grid-template-rows: repeat(7, var(--size-h));
+    gap: var(--gap);
+}
+
+.row-grid 
+{
+    display: flex;
+    gap: var(--gap);
+}
+
+.el 
+{
+    width: var(--size-w);
+    height: var(--size-h);
+    background: #b2b2b2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.2s;
+    cursor: crosshair;
+}
+
+.el b 
+{
+    font-size: 20px;
+    line-height: 1;
+}
+
+.el .t 
+{
+    font-size: 8px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.info 
+{
+    visibility: hidden;
+    width: 140px;
+    background: #e5e5e3;
+    color: #0f172a;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    z-index: 999;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.el:hover 
+{
+    transform: scale(1.15);
+    z-index: 10;
+}
+
+.el:hover .info 
+{
+    visibility: visible;
+}
+
+.alk 
+{
+    background: #991b1b;
+}
+
+.ear 
+{
+    background: #de7e44;
+}
+
+.tr 
+{
+    background: #b6b63c;
+}
+
+.p-tr 
+{
+    background: #4a9111;
+}
+
+.mtd 
+{
+    background: #3aa59f;
+}
+
+.n-met 
+{
+    background: #2096cd;
+}
+
+.hal 
+{
+    background: #7776b2;
+}
+
+.noble 
+{
+    background: #a12bb0;
+}
+
+.lan 
+{
+    background: #7ea363;
+}
+
+.act 
+{
+    background: #60c78e;
+}
+
+.empty 
+{
+    width: var(--size-w);
+    height: var(--size-h);
+    border: 1px dashed #000000;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}

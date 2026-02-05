@@ -1,0 +1,35 @@
+﻿﻿body 
+{
+}
+
+form 
+{
+    width: 50%;
+}
+
+form > div 
+{
+    text-align: right;
+    border: solid 1px;
+    margin: 10px;
+}
+
+select 
+{
+    width: 100%;
+    margin: 15px 0;
+}
+
+option:disabled
+/*select:first-child*/ 
+{
+    text-align: center;
+}
+
+.eula 
+{
+    width: 93%;
+    height: 300px;
+    overflow: scroll;
+    padding: 15px;
+}

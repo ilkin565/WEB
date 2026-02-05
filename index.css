@@ -1,0 +1,20 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body 
+{
+    font-family: Roboto Condensed;
+    font-size: 48px;
+    background-color: #FED6BC;
+}
+
+a 
+{
+    color: #5D4037;
+    text-decoration: none;
+}
+
+a:hover 
+{
+    color: #50C878;
+    text-decoration: underline;
+}

@@ -1,0 +1,199 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body 
+{
+    font-size: 24px;
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    /*font-family:'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4WkOhjNxqYcWLTeNYxbLOq3KR_Sag8AUxYg&s);
+    background-attachment:fixed;
+    color:white;*/
+    background-image: linear-gradient(to bottom right, lightskyblue, pink);
+    /*height: 88vh;*/ /*Viewport Height*/
+    background-attachment: fixed;
+}
+
+h3 
+{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p 
+{
+    /*name:value;*/
+    text-align: justify;
+    text-indent: 48px;
+    /*https://htmlbook.ru/faq/kak-mne-dlya-kazhdogo-abzatsa-dobavit-otstup-pervoy-stro*/
+}
+
+figure 
+{
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+}
+
+ol 
+{
+    list-style: upper-roman;
+}
+
+ul 
+{
+    list-style: georgian;
+}
+
+a 
+{
+    color: darkgreen;
+    /*padding:4px;*/
+}
+
+a:visited 
+{
+    color: blue;
+}
+
+a:hover 
+{
+    font-weight: 800;
+    /*font-size:32px;*/
+    /*padding:0;*/
+    color: black;
+}
+
+/*li
+{
+    padding:4px;
+}
+    li:hover
+    {
+        padding:0px;
+    }*/
+
+/*.table-of-contents, #table-of-contents
+{
+    background-image:linear-gradient(to bottom right, darkgreen, lightblue);
+}*/
+
+.header 
+{
+    text-shadow: 5px 5px 8px grey;
+}
+
+#table-of-contents > li > a, #table-of-contents > li > a:visited 
+{
+    font-weight: 700;
+}
+
+#table-of-contents > li > ul > li > a, #table-of-contents > li > ul > li > a:visited 
+{
+    font-weight: 500;
+}
+
+/*ul > li + li
+{
+    background-color:red;
+}*/
+
+/*
+tag
+{
+    styles;
+    ......;
+}
+
+descriptor
+{
+    styles;
+    ......;
+}
+
+#id
+{
+    styles;
+    ......;
+}
+
+.class
+{
+    styles;
+    ......;
+}
+
+*/
+/*selector1 selector2
+{
+    styles;
+    Стили будут применены ко всем 'selector2', которые вложены в 'selector1' на любом уровне.
+}
+
+selector1 > selector2
+{
+    styles;
+    Стили будут применены ко всем 'selector2', которые непосредственно вложены в 'selector1'.
+}
+
+selector1 + selector2
+{
+    styles;
+    Стили будут применены только к тем 'selector2', которые непосредственно следуют за 'selector1'.
+}
+
+selector1 ~ selector2
+{
+    styles;
+    Стили будут применены ко всем 'selector2', которые следуют за 'selector1'.
+}*/
+
+#margin-and-padding 
+{
+    border: solid 1px;
+    /* margin Внешний отступ*/
+    /*margin:20px 50px 150px 250px;*/ /*Отступы применяются начиная от верхней границы по часовой стрелке*/
+    margin: 20px 50px; /*верх-низ лево-право*/
+    margin: 20px 30px 50px; /*up left-right down*/
+    padding: 50px 0; /*Внутренний отступ*/
+}
+
+table 
+{
+    margin: 15px auto;
+    border: solid 2px;
+    border-spacing: 0;
+    box-shadow: 0px -10px 25px 25px grey;
+}
+
+table > caption 
+{
+    color: white;
+}
+
+tr:hover 
+{
+    box-shadow: inset -0px -3px 10px 1px green;
+}
+
+th, td 
+{
+    border: solid 1px;
+}
+
+thead th 
+{
+    border: solid 1px black;
+    padding: 15px 25px;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+tbody th 
+{
+    text-align: left;
+}
+
+td 
+{
+    text-align: center;
+}

@@ -1,0 +1,40 @@
+﻿body 
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #FED6BC;
+    padding: 40px;
+}
+
+.shape-section 
+{
+    margin-bottom: 50px;
+}
+
+.controls 
+{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input 
+{
+    font-size: 20px;
+    width: 60px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #777;
+}
+
+pre 
+{
+    font-family: 'Courier New', monospace;
+    font-size: 22px;
+    line-height: 1.1;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    display: inline-block;
+    border-radius: 8px;
+    min-width: 100px;
+}

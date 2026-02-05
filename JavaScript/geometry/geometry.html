@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Geometry</title>
+    <link rel="icon" href="geometry.ico">
+    <link rel="stylesheet" href="geometry.css">
+</head>
+<body>
+    <div class="shape-section">
+        <div class="controls">
+            <span>Ромб. Выбор размера:</span>
+            <input type="number" value="5" min="2" oninput="drawRhombus(this.value)">
+        </div>
+        <pre id="rhombus-out"></pre>
+    </div>
+    <div class="shape-section">
+        <div class="controls">
+            <span>Квадрат. Выбор размера:</span>
+            <input type="number" value="5" min="1" oninput="drawSquare(this.value)">
+        </div>
+        <pre id="square-out"></pre>
+    </div>
+    <div class="shape-section">
+        <div class="controls">
+            <span>Прямоугольный треугольник. Выбор размера:</span>
+            <input type="number" value="5" min="1" oninput="drawTriangle(this.value)">
+        </div>
+        <pre id="triangle-out"></pre>
+    </div>
+    <div class="shape-section">
+        <div class="controls">
+            <span>Перевёрнутый треугольник. Выбор размера:</span>
+            <input type="number" value="5" min="1" oninput="drawRevTriangle(this.value)">
+        </div>
+        <pre id="rev-triangle-out"></pre>
+    </div>
+    <script src="geometry.js"></script>
+</body>
+</html>

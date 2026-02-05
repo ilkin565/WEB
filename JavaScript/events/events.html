@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Events</title>
+    <link rel="icon" href="events.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="white">
+    <div id="header">
+        <div>Header</div>
+        <div onclick="switchBackground()">
+            <img src="img/moon.png" id="switch-background">
+        </div>
+    </div>
+    <!-------------------------------------------------------->
+    <h1>Events</h1>
+    <div id="photo-and-color">
+        <div id="select-photo" class="block">
+            <div id="photo-container">
+                <img alt="Фото студента" title="Фото" id="photo">
+            </div>
+            <input type="file" id="image-file" onchange="setImage()">
+        </div>
+        <!-------------------------------------------------------->
+        <br>
+        <div id="select-color" class="block">
+            <input type="color" id="choose-color" onchange="setBackground()"><label for="choose-color">Выберите Ваш любимый цвет</label>
+            <div id="color-sample"></div>
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+</html>
