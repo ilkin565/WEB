@@ -1,0 +1,87 @@
+﻿:root 
+{
+    --size: 450px;
+    --clock-bg: #ffffff;
+    --hand-color: #333;
+}
+
+body 
+{
+    background-color: #FED6BC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.clock 
+{
+    width: var(--size);
+    height: var(--size);
+    background: var(--clock-bg);
+    border-radius: 50%;
+    border: 12px solid var(--hand-color);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.number 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: calc(var(--size) * 0.08);
+    font-weight: bold;
+    color: var(--hand-color);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.hand 
+{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    background: var(--hand-color);
+    border-radius: 10px;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.hour 
+{
+    width: 10px;
+    height: 25%;
+    z-index: 3;
+}
+
+.minute 
+{
+    width: 7px;
+    height: 35%;
+    z-index: 2;
+}
+
+.second 
+{
+    width: 3px;
+    height: 40%;
+    background: #ff4757;
+    z-index: 1;
+}
+
+.center-dot 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--hand-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}

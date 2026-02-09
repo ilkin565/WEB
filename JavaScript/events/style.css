@@ -20,20 +20,46 @@ input
     font-size: 22px;
 }
 /*--------------------------------------------*/
+#switch-background 
+{
+    width: 32px;
+    height: 32px;
+    margin: 0px 16px;
+    background-size: 32px 32px;
+}
+
 .dark 
 {
     /*background-image:none;*/
+    /*transition: all 3s ease;*/
     color: #C8C8C8;
-    /*background-image:#323232;*/
-    background-image: linear-gradient(#323232, #323232);
+    background-color: #323232;
+    /*background-image: linear-gradient(#323232, #323232);*/
     background-attachment: fixed;
+    /*transition: color 3s, background-image 3s;*/
+}
+
+.dark #switch-background 
+{
+    background-image: url("img/sun.png");
+    filter: brightness(0) invert(1);
 }
 
 .white 
 {
+    /*transition: all 3s ease;*/
     color: black;
-    background-image: linear-gradient(to bottom right, lightskyblue, pink);
+    background-color: #C8C8C8;
+    /*background-image: linear-gradient(to bottom right, lightskyblue, pink);*/
     background-attachment: fixed;
+    /*transition: color 3s, background-image 3s;*/
+    /*transition: color 3s;
+    transition: background-image 3s;*/
+}
+
+.white #switch-background 
+{
+    background-image: url("img/moon.png");
 }
 
 #header 
@@ -59,11 +85,47 @@ input
 {
     border: solid 1px;
     width: 400px;
-    height: 300px;
+    height: 400px;
 }
 
 #photo 
 {
     width: 400px;
-    height: 300px;
+    height: 400px;
+}
+/*--------------------------------------------*/
+#display 
+{
+    border: solid 1px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.time-block 
+{
+    border: solid 3px;
+    border-radius: 10px;
+    width: 148px;
+    box-shadow: 0px 0px 25px 5px gray;
+}
+
+.time-unit 
+{
+    font-size: 48px;
+    color: #000000;
+    height: 148px;
+    background-color: #B5B8B1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-marker 
+{
+    border: solid 1px;
+    background-color: #D1BC8A;
+    color: #000000;
+    text-align: center;
 }
