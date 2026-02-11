@@ -13,37 +13,16 @@ function setBackground()
 {
     let color_tool = document.getElementById('choose-color');
     let color = color_tool.value;
-    //document.body.style.backgroundImage = "none";
-    //document.body.style.backgroundColor = color;
     document.getElementById('color-sample').style.backgroundColor = inverse_color;
     document.getElementById('color-sample').style.width = "200px";
     document.getElementById('color-sample').style.height = "200px";
 }
 function switchBackground()
 {
-    //let target = document.getElementById("switch-background").src;
-    //let path = target.split('/');
-    //let file = path[path.length - 1];
-    //////////////////////////////////////////////////
-    //console.log(file);
-    //if (file === "moon.png") document.getElementById("switch-background").src = "img/sun.png";
-    //else document.getElementById("switch-background").src = "img/moon.png";
-    //document.getElementById("switch-background").src = file === "moon.png" ? "img/sun.png" : "img/moon.png";
-    //document.body.style.backgroundImage = "none";
     let delay = document.getElementById("delay").value;
     document.body.style.transition = `background-color ${delay}s, color ${delay}s`;
     document.getElementById("switch-background").style.transition = `background-image ${delay}s, filter ${delay}s`;
     document.body.className = document.body.className === "dark" ? "white" : "dark";
-    //document.body.className = file === "moon.png" ? "dark" : "white";
-    //document.body.style.backgroundColor = file === "moon.png" ? "black" : "white";
-    //document.body.style.color = file === "moon.png" ? "white" : "black";
-    //document.getElementById("switch-background").src = `img/${file === "moon.png" ? "sun.png" : "moon.png"}`;
-    /*
-    ---------------------
-    5 == "5":true;
-    5 === "5":false;
-    ---------------------
-    */
 }
 document.addEventListener
 (
@@ -59,8 +38,43 @@ document.addEventListener
 //DOM - Document Object Model
 function addLeadingZero(number)
 {
-    //numer = Number(number);
     return number < 10 ? "0" + `${number}` : `${number}`;
+}
+let musicFiles = [];
+function loadMusicFolder(files)
+{
+    musicFiles = [];
+    const selector = document.getElementById("music-selector");
+    selector.innerHTML = '<option value="">Выберите музыку</option>';
+    
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        if (file.type.startsWith('audio/')) {
+            const url = URL.createObjectURL(file);
+            musicFiles.push({
+                name: file.name,
+                url: url,
+                file: file
+            });
+            
+            const option = document.createElement("option");
+            option.value = url;
+            option.textContent = file.name;
+            selector.appendChild(option);
+        }
+    }
+}
+function playSelectedMusic()
+{
+    const selector = document.getElementById("music-selector");
+    const player = document.getElementById("player");
+    const source = document.getElementById("audio-source");
+    
+    if (selector.value) {
+        source.src = selector.value;
+        player.load();
+        player.play();
+    }
 }
 document.body.onload = function tick_timer()
 {
@@ -99,28 +113,6 @@ document.getElementById("btn-start").onclick = function startCountdownTimer()
         clearTimeout(tickCountdown);
         resetDisplay();
     }
-
-    //let display = document.getElementById("display");
-    ////////////////////////////////////////
-    //let append = document.createElement("div");
-    //append.id = "appended";
-    //append.innerHTML = "Appended element";
-    //display.append(append);
-    ////////////////////////////////////////
-    //let prepend = document.createElement("div");
-    //prepend.id = "prepended";
-    //prepend.innerHTML = "Prepended element";
-    //display.prepend(prepend);
-    ////////////////////////////////////////
-    //let before = document.createElement("h3");
-    //before.id = "before-display";
-    //before.innerHTML = "Time left since the beginning";
-    //display.before(before);
-    ////////////////////////////////////////
-    //let after = document.createElement("h4");
-    //after.id = "paradise";
-    //after.innerHTML = "Сюда нужно будет прикрутить музон";
-    //display.after(after);
 }
 function tickCountdown()
 {
@@ -144,8 +136,6 @@ function tickCountdown()
     document.getElementById("target-date-value").innerHTML = targetDateValue;
     document.getElementById("target-time-value").innerHTML = targetTimeValue;
     document.getElementById("current-time-value").innerHTML = now;
-
-    //console.log(`${targetDateValue}\t${targetTimeValue}`);
 
     let duration = targetTimeValue - now;
     document.getElementById("duration").innerHTML = duration;
@@ -172,9 +162,6 @@ function tickCountdown()
         date = date % SECONDS_PER_YEAR;
         let years_unit = document.getElementById("years-unit");
         if (years_unit == null) {
-            //let display = document.getElementById("display");
-            //display.prepend(createTimeBlock("years", addLeadingZero(years)));
-
             let years_block = createTimeBlock("years", years);
             let hours_block = document.getElementById("hours-unit").parentElement;
             hours_block.before(years_block);
@@ -185,7 +172,6 @@ function tickCountdown()
 
     let months = Math.floor(date / SECONDS_PER_MONTH);
     if (months > 0) {
-        //let display = document.getElementById("display");
         date = date % SECONDS_PER_MONTH;
         let months_unit = document.getElementById("months-unit");
         if (months_unit == null) {
@@ -236,7 +222,6 @@ function tickCountdown()
     document.getElementById("minutes-unit").innerHTML = addLeadingZero(minutes);
     document.getElementById("seconds-unit").innerHTML = addLeadingZero(seconds);
 
-    //if (timestamp > 0 && document.getElementById("btn-start").value === "Stop")
     if (document.getElementById("btn-start").value === "Stop")
         setTimeout(tickCountdown, 100);
     if (timestamp == 0)
@@ -281,12 +266,10 @@ function removeTimeBlock(name)
 function resetDisplay()
 {
     let display = document.getElementById("display");
-    //display.innerHTML = "";
     console.log(display.children.length);
     let children = display.children;
     console.log(children);
     console.log(display.children[0]);
     while (display.children[0].children[0].id != "hours-unit")
         display.children[0].remove();
-    //removeTimeBlock("days");
 }

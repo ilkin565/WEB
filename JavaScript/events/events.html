@@ -38,54 +38,6 @@
             </div>
         </div>
     </details>
-    <!--<details>
-        <summary>Arrays</summary>
-        <h2>Arrays</h2>
-        <script>
-            let arr = [3,5,8,13,21];
-            console.log(arr);
-            let values = [true, false, '+', 3.14, "Hello", 2.7];
-            console.log(values);
-            console.table(values);
-            document.write(`<pre>`);
-            for (let i = 0; i < arr.length; i++)
-            {
-                document.write(`${arr[i]}\t`);
-            }
-            document.write(`</pre>`);
-
-            let arr2 =
-                [
-                    [1,2,3],
-                    [4,5,6],
-                    [7,8,9],
-                ];
-            document.write(`<pre>`);
-            //foreach (let i : arr2) document.write(`${i}`);
-            arr2.forEach((element) => document.write(element));
-            document.writeln();
-            for (let i = 0; i < arr2.length; i++)
-            {
-                for (let j = 0; j < arr2[i].length; j++)
-                {
-                    document.write(`${arr2[i][j]}\t`);
-                }
-                document.writeln();
-            }
-            document.write(`</pre>`);
-            console.log(arr2);
-            console.table(arr2);
-
-            let jaggedArr =
-                [
-                    [3, 5, 8, 13, 21],
-                    ["Хорошо", "живет", "на", "свете", "Винни", "Пух"],
-                    [34, 55, 89]
-                ];
-            console.log(jaggedArr);
-            console.table(jaggedArr);
-        </script>
-    </details>-->
     <hr>
     <details>
         <summary>Time</summary>
@@ -138,8 +90,12 @@
         </div>
     </div>
     <div>
+        <input type="file" id="music-folder" webkitdirectory directory multiple onchange="loadMusicFolder(this.files)">
+        <select id="music-selector" onchange="playSelectedMusic()">
+            <option value="">Выберите музыку</option>
+        </select>
         <audio controls id="player" style="width:100%">
-            <source src="sound/1. Metaphor.mp3">
+            <source src="sound/1. Metaphor.mp3" id="audio-source">
         </audio>
     </div>
     <script src="functions.js"></script>
