@@ -1,9 +1,14 @@
-﻿﻿#container 
+﻿body 
+{
+    background-color: #FED6BC;
+}
+
+#container 
 {
     width: 400px;
     height: 400px;
     position: relative;
-    background: yellow;
+    background: #A4957D;
 }
 
 #animation 
@@ -11,6 +16,6 @@
     width: 150px;
     height: 50px;
     position: absolute;
-    background: red;
-    color: yellow;
+    background: #6FC276;
+    color: #000000;
 }
