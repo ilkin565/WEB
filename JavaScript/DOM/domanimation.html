@@ -8,10 +8,17 @@
 </head>
 <body>
     <h1>Document Object Model Animation</h1>
-    <div id="container" onclick="Move()">
-        <div id="animation">Document Object Model Animation</div>
+    <div style="margin-bottom: 10px;">
+        <label for="fontSize">Размер шрифта (px):</label>
+        <input type="number" id="fontSize" min="8" max="72" value="16" step="1" onchange="changeFontSize()">
     </div>
-    <input type="number" id="interval" min="1" max="60" value="5" /><label for="interval">Interval</label>
+    <div style="margin-bottom: 10px;">
+        <label for="interval">Интервал (мс):</label>
+        <input type="number" id="interval" min="1" max="60" value="5">
+    </div>
+    <button onclick="toggleMove()">Старт / Стоп</button>
+    <div id="animation">Document Object Model Animation</div>
+
     <script src="domanimation.js"></script>
 </body>
 </html>
